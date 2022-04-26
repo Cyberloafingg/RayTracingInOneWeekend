@@ -45,7 +45,6 @@ hittable_list random_scene() {
 			}
 		}
 	}
-
 	auto material1 = make_shared<dielectric>(1.5);
 	world.add(make_shared<sphere>(point3(0, 1, 0), 1.0, material1));
 
