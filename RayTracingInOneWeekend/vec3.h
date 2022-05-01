@@ -17,7 +17,7 @@ public:
 	//定义运算符
 	vec3 operator-() const { return vec3(-e[0], -e[1], -e[2]); }
 	double operator[](int i) const { return e[i]; }
-	//不过为什么要定义一个
+
 	double& operator[](int i) { return e[i]; }
 	vec3& operator+=(const vec3& v) {
 		e[0] += v.e[0];
@@ -41,7 +41,7 @@ public:
 	double length_squared() const {
 		return e[0] * e[0] + e[1] * e[1] + e[2] * e[2];
 	}
-	//成员函数
+	//内连函数
 	inline static vec3 random() {
 		return vec3(random_double(), random_double(), random_double());
 	}
@@ -62,7 +62,7 @@ public:
 
 using point3 = vec3;	//3D point
 using color = vec3;		//RGB color
-
+//对于<<的重载运算符，这里返回的就是ostream的引用，要符合<<的友元规则
 inline std::ostream& operator<<(std::ostream& out, const vec3& v) {
 	return out << v.e[0] << ' ' << v.e[1] << ' ' << v.e[2];
 }

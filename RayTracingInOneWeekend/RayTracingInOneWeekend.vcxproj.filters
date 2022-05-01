@@ -47,5 +47,11 @@
     <ClInclude Include="material.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="moving_sphere.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="aabb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
